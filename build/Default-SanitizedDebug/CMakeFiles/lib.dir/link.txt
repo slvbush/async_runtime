@@ -1,2 +1,0 @@
-/usr/bin/ar qc liblib.a CMakeFiles/lib.dir/lib/coro/coroutine.cpp.o CMakeFiles/lib.dir/lib/coro/yield.cpp.o "CMakeFiles/lib.dir/lib/sched/list-element.cpp.o" "CMakeFiles/lib.dir/lib/sched/run-loop.cpp.o" "CMakeFiles/lib.dir/lib/sched/thread-pool.cpp.o" CMakeFiles/lib.dir/lib/sync/event.cpp.o CMakeFiles/lib.dir/lib/sync/mutex.cpp.o
-/usr/bin/ranlib liblib.a
