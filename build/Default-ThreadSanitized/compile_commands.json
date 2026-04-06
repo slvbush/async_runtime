@@ -1,0 +1,116 @@
+[
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/lib -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/lib.dir/lib/coro/coroutine.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/lib/coro/coroutine.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/lib/coro/coroutine.cpp",
+  "output": "CMakeFiles/lib.dir/lib/coro/coroutine.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/lib -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/lib.dir/lib/coro/yield.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/lib/coro/yield.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/lib/coro/yield.cpp",
+  "output": "CMakeFiles/lib.dir/lib/coro/yield.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/lib -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/lib.dir/lib/sched/run-loop.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/lib/sched/run-loop.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/lib/sched/run-loop.cpp",
+  "output": "CMakeFiles/lib.dir/lib/sched/run-loop.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/lib -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/lib.dir/lib/sched/thread-pool.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/lib/sched/thread-pool.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/lib/sched/thread-pool.cpp",
+  "output": "CMakeFiles/lib.dir/lib/sched/thread-pool.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/lib -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/lib.dir/lib/sync/event.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/lib/sync/event.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/lib/sync/event.cpp",
+  "output": "CMakeFiles/lib.dir/lib/sync/event.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/lib -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/lib.dir/lib/sync/mutex.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/lib/sync/mutex.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/lib/sync/mutex.cpp",
+  "output": "CMakeFiles/lib.dir/lib/sync/mutex.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/lib -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/lib.dir/lib/utils/list-element.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/lib/utils/list-element.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/lib/utils/list-element.cpp",
+  "output": "CMakeFiles/lib.dir/lib/utils/list-element.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/alloc-count.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/alloc-count.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/alloc-count.cpp",
+  "output": "CMakeFiles/tests.dir/test/alloc-count.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/coro/run-loop-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/coro/run-loop-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/coro/run-loop-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/coro/run-loop-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/coro/thread-pool-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/coro/thread-pool-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/coro/thread-pool-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/coro/thread-pool-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sched/run-loop-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sched/run-loop-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sched/run-loop-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sched/run-loop-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sched/thread-pool-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sched/thread-pool-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sched/thread-pool-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sched/thread-pool-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sync/channel-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sync/channel-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sync/channel-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sync/channel-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sync/channel-tp-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sync/channel-tp-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sync/channel-tp-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sync/channel-tp-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sync/event-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sync/event-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sync/event-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sync/event-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sync/event-tp-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sync/event-tp-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sync/event-tp-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sync/event-tp-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sync/mutex-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sync/mutex-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sync/mutex-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sync/mutex-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/sync/mutex-tp-test.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/sync/mutex-tp-test.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/sync/mutex-tp-test.cpp",
+  "output": "CMakeFiles/tests.dir/test/sync/mutex-tp-test.cpp.o"
+},
+{
+  "directory": "/Users/slvbush/Documents/cpp/async_runtime/build/Default-ThreadSanitized",
+  "command": "/usr/bin/c++  -I/Users/slvbush/Documents/cpp/async_runtime/test -I/Users/slvbush/Documents/cpp/async_runtime/lib -isystem /opt/homebrew/include -O2 -g -DNDEBUG -std=c++2b -arch arm64 -stdlib=libc++ -DTSAN -fsanitize=thread -fno-sanitize-recover=all -fno-optimize-sibling-calls -fno-omit-frame-pointer -Wall -Wextra -Wno-self-move -pedantic -Wold-style-cast -Wextra-semi -Woverloaded-virtual -Wzero-as-null-pointer-constant -Wimplicit-fallthrough -Wshadow-uncaptured-local -Wloop-analysis -Wno-self-assign-overloaded -o CMakeFiles/tests.dir/test/wait-group.cpp.o -c /Users/slvbush/Documents/cpp/async_runtime/test/wait-group.cpp",
+  "file": "/Users/slvbush/Documents/cpp/async_runtime/test/wait-group.cpp",
+  "output": "CMakeFiles/tests.dir/test/wait-group.cpp.o"
+}
+]

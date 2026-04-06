@@ -15,26 +15,26 @@ bool Coroutine::PromiseType::FinalSuspendAwaiter::await_ready() noexcept {
 }
 
 void Coroutine::PromiseType::FinalSuspendAwaiter::await_suspend(
-    std::coroutine_handle<Coroutine::promise_type> h
-) noexcept {
+    std::coroutine_handle<Coroutine::promise_type> h) noexcept {
   h.destroy();
 }
 
 void Coroutine::PromiseType::FinalSuspendAwaiter::await_resume() noexcept {}
 
-Coroutine::PromiseType::FinalSuspendAwaiter Coroutine::PromiseType::final_suspend() noexcept {
+Coroutine::PromiseType::FinalSuspendAwaiter
+Coroutine::PromiseType::final_suspend() noexcept {
   return {};
 }
 
 void Coroutine::PromiseType::return_void() {}
 
-void Coroutine::PromiseType::unhandled_exception() {
-  std::terminate();
-}
+void Coroutine::PromiseType::unhandled_exception() { std::terminate(); }
 
-void Coroutine::PromiseType::resume(sched::IntrusiveListScheduler& scheduler) noexcept {
+void Coroutine::PromiseType::resume(
+    sched::IntrusiveListScheduler &scheduler) noexcept {
   current_sched = &scheduler;
-  current_coro = Coroutine(std::coroutine_handle<Coroutine::PromiseType>::from_promise(*this));
+  current_coro = Coroutine(
+      std::coroutine_handle<Coroutine::PromiseType>::from_promise(*this));
   handle_t::from_promise(*this).resume();
 }
 
@@ -45,19 +45,15 @@ Coroutine::Coroutine() = default;
 
 Coroutine::~Coroutine() {}
 
-Coroutine::promise_type& Coroutine::promise() {
-  return _handle.promise();
-}
+Coroutine::promise_type &Coroutine::promise() { return _handle.promise(); }
 
-Coroutine& Coroutine::current() {
-  return current_coro;
-}
+Coroutine &Coroutine::current() { return current_coro; }
 
-sched::IntrusiveListScheduler* Coroutine::current_scheduler() {
+sched::IntrusiveListScheduler *Coroutine::current_scheduler() {
   return current_sched;
 }
 
-thread_local sched::IntrusiveListScheduler* Coroutine::current_sched = nullptr;
+thread_local sched::IntrusiveListScheduler *Coroutine::current_sched = nullptr;
 thread_local Coroutine Coroutine::current_coro;
 
 } // namespace ct::coro

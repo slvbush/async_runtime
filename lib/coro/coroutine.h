@@ -1,7 +1,7 @@
 #pragma once
 
-#include "sched/resumable.h"
-#include "sched/scheduler.h"
+#include "../sched/resumable.h"
+#include "../sched/scheduler.h"
 
 #include <coroutine>
 #include <exception>
@@ -27,7 +27,7 @@ class Coroutine {
     void return_void();
     void unhandled_exception();
 
-    void resume(sched::IntrusiveListScheduler& scheduler) noexcept override;
+    void resume(sched::IntrusiveListScheduler &scheduler) noexcept override;
   };
 
 public:
@@ -39,21 +39,21 @@ public:
   ~Coroutine();
 
   // Non-copyable
-  Coroutine(const Coroutine&) = delete;
-  Coroutine& operator=(const Coroutine&) = delete;
+  Coroutine(const Coroutine &) = delete;
+  Coroutine &operator=(const Coroutine &) = delete;
 
   // Moveable
-  Coroutine(Coroutine&& other) noexcept = default;
-  Coroutine& operator=(Coroutine&& other) noexcept = default;
+  Coroutine(Coroutine &&other) noexcept = default;
+  Coroutine &operator=(Coroutine &&other) noexcept = default;
 
 public:
-  promise_type& promise();
-  static Coroutine& current();
-  static sched::IntrusiveListScheduler* current_scheduler();
+  promise_type &promise();
+  static Coroutine &current();
+  static sched::IntrusiveListScheduler *current_scheduler();
 
 private:
   static thread_local Coroutine current_coro;
-  static thread_local sched::IntrusiveListScheduler* current_sched;
+  static thread_local sched::IntrusiveListScheduler *current_sched;
   std::coroutine_handle<promise_type> _handle;
 };
 

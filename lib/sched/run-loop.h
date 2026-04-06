@@ -13,12 +13,12 @@ public:
   RunLoop();
 
   // Non-copyable
-  RunLoop(const RunLoop&) = delete;
-  RunLoop& operator=(const RunLoop&) = delete;
+  RunLoop(const RunLoop &) = delete;
+  RunLoop &operator=(const RunLoop &) = delete;
 
   // Non-moveable
-  RunLoop(RunLoop&&) = delete;
-  RunLoop& operator=(RunLoop&&) = delete;
+  RunLoop(RunLoop &&) = delete;
+  RunLoop &operator=(RunLoop &&) = delete;
 
   // Run at most `limit` tasks from queue
   // Returns number of completed tasks
@@ -33,7 +33,7 @@ public:
   // Post-condition: empty() == true
   std::size_t run();
 
-  void spawn(Resumable<IntrusiveListScheduler>& task) final;
+  void spawn(Resumable<IntrusiveListScheduler> &task) final;
   bool empty() const noexcept;
   std::size_t size() const noexcept;
 };
