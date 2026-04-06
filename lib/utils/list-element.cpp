@@ -4,23 +4,27 @@
 
 namespace ct::intrusive {
 
-ListElementImpl::ListElementImpl() { loop(); }
-
-void ListElementImpl::unlink() {
-  prev->next = next;
-  next->prev = prev;
+ListElementImpl::ListElementImpl() {
   loop();
 }
 
-ListElementImpl::~ListElementImpl() { unlink(); }
+void ListElementImpl::unlink() {
+  _prev->_next = _next;
+  _next->_prev = _prev;
+  loop();
+}
 
-void link(ListElementImpl *lhs, ListElementImpl *rhs) {
-  lhs->next = rhs;
-  rhs->prev = lhs;
+ListElementImpl::~ListElementImpl() {
+  unlink();
+}
+
+void link(ListElementImpl* lhs, ListElementImpl* rhs) {
+  lhs->_next = rhs;
+  rhs->_prev = lhs;
 }
 
 void ListElementImpl::loop() {
-  prev = this;
-  next = this;
+  _prev = this;
+  _next = this;
 }
 } // namespace ct::intrusive

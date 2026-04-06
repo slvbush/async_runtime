@@ -7,23 +7,23 @@
 
 namespace ct::sync {
 
+// Lock-free one-shot event implementation
 class Event {
 private:
   class EventAwaiter {
   public:
     bool await_ready() const noexcept;
-    bool await_suspend(
-        std::coroutine_handle<coro::Coroutine::promise_type> handle) noexcept;
+    bool await_suspend(std::coroutine_handle<coro::Coroutine::promise_type> handle) noexcept;
     void await_resume() noexcept;
 
   private:
     friend class Event;
 
-    EventAwaiter(const Event &event) noexcept;
+    EventAwaiter(const Event& event) noexcept;
 
     std::coroutine_handle<coro::Coroutine::promise_type> awaiting_coroutine;
-    EventAwaiter *next;
-    const Event &event;
+    EventAwaiter* next;
+    const Event& event;
   };
 
 public:
@@ -32,8 +32,7 @@ public:
   EventAwaiter wait() noexcept;
 
 private:
-  friend struct awaiter;
-  mutable std::atomic<void *> state{nullptr};
+  mutable std::atomic<void*> _state{nullptr};
 };
 
 } // namespace ct::sync

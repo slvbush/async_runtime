@@ -14,8 +14,8 @@ std::size_t RunLoop::run_at_most(std::size_t limit) {
 
 bool RunLoop::run_next() {
   if (!empty()) {
-    auto* task_ptr = &queue.front();
-    queue.pop_front();
+    auto* task_ptr = &_queue.front();
+    _queue.pop_front();
     task_ptr->resume(*this);
     return true;
   }
@@ -27,14 +27,14 @@ std::size_t RunLoop::run() {
 }
 
 void RunLoop::spawn(Resumable<IntrusiveListScheduler>& task) {
-  queue.push_back(task);
+  _queue.push_back(task);
 }
 
 bool RunLoop::empty() const noexcept {
-  return queue.empty();
+  return _queue.empty();
 }
 
 std::size_t RunLoop::size() const noexcept {
-  return queue.size();
+  return _queue.size();
 }
 } // namespace ct::sched

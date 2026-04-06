@@ -1,65 +1,66 @@
 #pragma once
 
-#include <type_traits>
-
 #include "list-element.h"
 
-namespace ct::intrusive {
+#include <type_traits>
 
+namespace ct::intrusive::lockfree {
+
+// Lock-free MS-queue implementation
 template <typename T>
-  requires(std::is_base_of_v<AtomicSingleLinkedListElementImpl, T>)
+  requires (std::is_base_of_v<AtomicSingleLinkedListElementImpl, T>)
 class LockFreeIntrusiveQueue {
-  std::atomic<T *> head;
-  std::atomic<T *> tail;
+  std::atomic<T*> _head;
+  std::atomic<T*> _tail;
 
 public:
-  LockFreeIntrusiveQueue(T *dummy) : head(dummy), tail(dummy) {}
+  LockFreeIntrusiveQueue(T* dummy)
+      : _head(dummy)
+      , _tail(dummy) {}
 
-  T *pop() {
+  T* pop() {
     while (true) {
-      T *old_head = head;
-      T *old_tail = tail;
-      T *next_head = cast_back(cast_to_atomic(head.load())->next);
+      T* old_head = _head;
+      T* old_tail = _tail;
+      T* next_head = cast_back(cast_to_atomic(_head.load())->_next);
       if (old_head == old_tail) {
         if (!next_head) {
           return nullptr;
         } else {
-          tail.compare_exchange_strong(old_tail, next_head);
+          _tail.compare_exchange_strong(old_tail, next_head);
         }
       } else {
-        if (head.compare_exchange_strong(old_head, next_head)) {
+        if (_head.compare_exchange_strong(old_head, next_head)) {
           return next_head;
         }
       }
     }
   }
 
-  void push(T *awaiter) {
+  void push(T* el) {
     while (true) {
-      T *old_tail = tail.load();
-      AtomicSingleLinkedListElementImpl *null_tail = nullptr;
-      if (cast_to_atomic(tail.load())
-              ->next.compare_exchange_strong(null_tail, awaiter)) {
-        tail.compare_exchange_strong(old_tail, awaiter);
+      T* old_tail = _tail.load();
+      AtomicSingleLinkedListElementImpl* null_tail = nullptr;
+      if (cast_to_atomic(_tail.load())->_next.compare_exchange_strong(null_tail, el)) {
+        _tail.compare_exchange_strong(old_tail, el);
         return;
       } else {
-        tail.compare_exchange_strong(
-            old_tail, cast_back(cast_to_atomic(tail.load())->next.load()));
+        _tail.compare_exchange_strong(old_tail, cast_back(cast_to_atomic(_tail.load())->_next.load()));
       }
     }
   }
 
-  T *get_dummy() { return head.load(std::memory_order_relaxed); }
+  T* get_dummy() {
+    return _head.load(std::memory_order_relaxed);
+  }
 
 private:
-  // friend class ct::sync::Mutex;
-
-  AtomicSingleLinkedListElementImpl *cast_to_atomic(T *node_ptr) {
-    return static_cast<AtomicSingleLinkedListElementImpl *>(node_ptr);
+  AtomicSingleLinkedListElementImpl* cast_to_atomic(T* node_ptr) {
+    return static_cast<AtomicSingleLinkedListElementImpl*>(node_ptr);
   }
 
-  T *cast_back(AtomicSingleLinkedListElementImpl *node_ptr) {
-    return static_cast<T *>(node_ptr);
+  T* cast_back(AtomicSingleLinkedListElementImpl* node_ptr) {
+    return static_cast<T*>(node_ptr);
   }
 };
-} // namespace ct::intrusive
+} // namespace ct::intrusive::lockfree

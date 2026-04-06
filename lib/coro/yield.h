@@ -6,6 +6,8 @@
 
 namespace ct::coro {
 
+// Returns an execution flow to a scheduler
+// resuming coroutine
 class YieldAwaiter {
 public:
   bool await_ready();

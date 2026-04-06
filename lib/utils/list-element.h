@@ -8,12 +8,12 @@ class DefaultTag;
 
 class AtomicSingleLinkedListElementImpl {
 public: // temporary
-  std::atomic<AtomicSingleLinkedListElementImpl *> next{nullptr};
+  std::atomic<AtomicSingleLinkedListElementImpl*> _next{nullptr};
 };
 
 class SingleLinkedListElementImpl {
 public:
-  SingleLinkedListElementImpl *next{nullptr};
+  SingleLinkedListElementImpl* _next{nullptr};
 };
 
 class ListElementImpl {
@@ -24,17 +24,21 @@ class ListElementImpl {
   void loop();
   void unlink();
 
-  friend void link(ListElementImpl *lhs, ListElementImpl *rhs);
+  friend void link(ListElementImpl* lhs, ListElementImpl* rhs);
 
-  template <typename T, typename Tag> friend class List;
+  template <typename T, typename Tag>
+  friend class List;
 
-  template <typename Tag> friend class ListElement;
+  template <typename Tag>
+  friend class ListElement;
 
-  ListElementImpl *prev;
-  ListElementImpl *next;
+  ListElementImpl* _prev;
+  ListElementImpl* _next;
 };
 
-template <typename = DefaultTag> class ListElement : ListElementImpl {
-  template <typename T, typename ListTag> friend class List;
+template <typename = DefaultTag>
+class ListElement : ListElementImpl {
+  template <typename T, typename ListTag>
+  friend class List;
 };
 } // namespace ct::intrusive

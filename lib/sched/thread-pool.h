@@ -10,6 +10,9 @@
 #include <vector>
 
 namespace ct::sched {
+
+// Just a thread-pool scheduler,
+// not movable yet
 class ThreadPool final : public IntrusiveListScheduler {
 public:
   explicit ThreadPool(std::size_t threads);
@@ -18,7 +21,7 @@ public:
   ThreadPool(const ThreadPool&) = delete;
   ThreadPool& operator=(const ThreadPool&) = delete;
 
-  // Non-moveable
+  // Non-moveable *yet*
   ThreadPool(ThreadPool&&) = delete;
   ThreadPool& operator=(ThreadPool&&) = delete;
 
@@ -28,10 +31,10 @@ public:
   void spawn(Resumable<IntrusiveListScheduler>& task) final;
 
 private:
-  std::atomic<bool> runs = false;
-  std::mutex m;
-  std::condition_variable cv;
-  std::vector<std::jthread> workers;
+  std::atomic<bool> _runs = false;
+  std::mutex _mutex;
+  std::condition_variable _cv;
+  std::vector<std::jthread> _workers;
 };
 
 } // namespace ct::sched
