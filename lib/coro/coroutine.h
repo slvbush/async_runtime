@@ -38,8 +38,6 @@ public:
   explicit Coroutine(std::coroutine_handle<promise_type> h);
   Coroutine();
 
-  ~Coroutine();
-
   // Non-copyable
   Coroutine(const Coroutine&) = delete;
   Coroutine& operator=(const Coroutine&) = delete;

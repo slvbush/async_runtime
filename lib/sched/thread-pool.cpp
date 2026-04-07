@@ -2,6 +2,8 @@
 
 namespace ct::sched {
 ThreadPool::ThreadPool(std::size_t threads) {
+  _workers.reserve(threads);
+
   for (std::size_t i = 0; i < threads; ++i) {
     _workers.emplace_back([&](std::stop_token t) {
       while (true) {
@@ -33,14 +35,14 @@ ThreadPool::~ThreadPool() {
 }
 
 void ThreadPool::run() {
-  _runs.store(true, std::memory_order_release);
+  _runs.store(true, std::memory_order_relaxed);
   _cv.notify_all();
 }
 
 void ThreadPool::spawn(Resumable<IntrusiveListScheduler>& task) {
   std::lock_guard guard(_mutex);
   _queue.push_back(task);
-  if (_runs.load(std::memory_order_acquire)) {
+  if (_runs.load(std::memory_order_relaxed)) {
     _cv.notify_one();
   }
 }

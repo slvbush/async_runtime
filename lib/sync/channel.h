@@ -37,7 +37,7 @@ private:
 
   struct Recv {};
 
-  static void move_value_to_buffer(auto& state, T& val) {
+  static void move_value_to_buffer(State& state, T&& val) {
     state.buffer.push(std::move(val));
   }
 
@@ -54,10 +54,10 @@ private:
   static bool
   try_sync(auto& state, FirstAwaiterT& that, SecondAwaiterT*& head, SecondAwaiterT*& tail, bool capacity_valid) {
     if (capacity_valid || state.capacity == 0) {
-      if (head == tail && !head) {
+      if (!head) {
         if (state.capacity > 0) {
           if constexpr (std::is_same_v<ActionT, Send>) {
-            move_value_to_buffer(state, that.val);
+            move_value_to_buffer(state, std::move(that.val));
           } else {
             move_from_buffer_to_value(state, that.val);
           }
@@ -74,7 +74,7 @@ private:
         } else {
           if (state.capacity > 0) {
             move_from_buffer_to_value(state, that.val);
-            move_value_to_buffer(state, aw->val);
+            move_value_to_buffer(state, std::move(aw->val));
           } else {
             move_value_to_value(aw->val, that.val);
           }
@@ -116,9 +116,7 @@ private:
     SendAwaiter* next{nullptr};
     std::shared_ptr<State> state_ptr;
 
-    union {
-      T val;
-    };
+    T val;
   };
 
   class RecvAwaiter {

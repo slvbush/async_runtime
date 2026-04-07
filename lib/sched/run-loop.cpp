@@ -5,7 +5,7 @@ RunLoop::RunLoop() = default;
 
 std::size_t RunLoop::run_at_most(std::size_t limit) {
   std::size_t cnt = 0;
-  while (cnt < limit && !empty()) {
+  while (cnt != limit && !empty()) {
     run_next();
     ++cnt;
   }
@@ -14,9 +14,9 @@ std::size_t RunLoop::run_at_most(std::size_t limit) {
 
 bool RunLoop::run_next() {
   if (!empty()) {
-    auto* task_ptr = &_queue.front();
+    auto& task_ptr = _queue.front();
     _queue.pop_front();
-    task_ptr->resume(*this);
+    task_ptr.resume(*this);
     return true;
   }
   return false;

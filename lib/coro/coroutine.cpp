@@ -14,7 +14,8 @@ bool Coroutine::PromiseType::FinalSuspendAwaiter::await_ready() noexcept {
   return false;
 }
 
-void Coroutine::PromiseType::FinalSuspendAwaiter::await_suspend(std::coroutine_handle<Coroutine::promise_type> h
+void Coroutine::PromiseType::FinalSuspendAwaiter::await_suspend(
+    std::coroutine_handle<Coroutine::promise_type> h
 ) noexcept {
   h.destroy();
 }
@@ -41,8 +42,6 @@ Coroutine::Coroutine(std::coroutine_handle<promise_type> h)
     : _handle(std::move(h)) {}
 
 Coroutine::Coroutine() = default;
-
-Coroutine::~Coroutine() {}
 
 Coroutine::promise_type& Coroutine::promise() {
   return _handle.promise();

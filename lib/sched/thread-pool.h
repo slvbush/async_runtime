@@ -32,7 +32,7 @@ public:
 
 private:
   std::atomic<bool> _runs = false;
-  std::mutex _mutex;
+  mutable std::mutex _mutex;
   std::condition_variable _cv;
   std::vector<std::jthread> _workers;
 };
