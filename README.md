@@ -203,3 +203,10 @@ std::cout << co_await ch.recv() << std::endl;
 Подключите нужные модули (`coro`, `sched`, `sync`) и стройте асинхронную логику через `coro::go`.
 
 ---
+
+
+## Benchmarks
+
+| ns/op         | op/s | err% | total | benchmark |
+|--------------:|-----:|-----:|------:|:----------|
+| 646317584.00  | 1.55 | 0.9% | 7.12  | `mutex critical section` |

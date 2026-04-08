@@ -39,4 +39,4 @@ target_link_libraries(tests PRIVATE lib)
 # Link tests with dependencies
 find_package(GTest CONFIG REQUIRED)
 target_link_libraries(tests PRIVATE GTest::gtest GTest::gtest_main)
-
+target_link_libraries(tests PRIVATE nanobench)
